@@ -14,9 +14,8 @@ function getRandomColor() {
 function setRandomColor() {
     var background = document.getElementsByTagName( 'main' )[0];
     var newColor = getRandomColor();
-    // checks if generated color has already been used
-    if( used.includes( newColor ) ) {
-        // if yes, sets a new value for color
+    // loops until a color that hasn't been used is generated
+    while( used.includes( newColor ) ) {
         newColor = getRandomColor();
     }
 
